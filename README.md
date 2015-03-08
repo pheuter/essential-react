@@ -14,6 +14,7 @@ A minimal skeleton for building testable React apps using ES6.
   - [watch](#watch)
   - [build](#build)
   - [test](#test)
+  - [cover](#cover)
   - [server](#server)
   - [clean](#clean)
 - [TODO](#todo)
@@ -119,6 +120,16 @@ $ npm run test-watch
 Leverages [Mochify](https://github.com/mantoni/mochify.js) to run through all tests `require-d` in the input file.
 
 Running `test-watch` will listen for changes and re-run the specs on-the-fly.
+
+### cover
+
+```sh
+$ npm run cover
+```
+
+**Input:** `test/main.js`
+
+Executes [cover.js](cover.js) that leverages [mochify-istanbul](https://github.com/ferlores/mochify-istanbul) to generate a code coverage report that is then sent to [Coveralls](http://coveralls.io/).
 
 ### server
 
