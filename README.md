@@ -1,6 +1,7 @@
 # Essential React
 
 [![Travis branch](https://img.shields.io/travis/pheuter/essential-react.svg?style=flat-square)](https://travis-ci.org/pheuter/essential-react)
+[![Coveralls](https://img.shields.io/coveralls/pheuter/essential-react.svg?style=flat-square)](https://coveralls.io/r/pheuter/essential-react)
 
 A minimal skeleton for building testable React apps using ES6.
 
@@ -143,9 +144,9 @@ Removes the compiled app file from build.
 
 - [ ] Styling using [Radium](https://github.com/FormidableLabs/radium).
   - [ ] Responsive design with media query mixins
-- [ ] Testing
+- [x] Testing
   - [x] Unit test suite
   - [x] CI
-  - [ ] Code coverage
+  - [x] Code coverage
 - [ ] Examples of nested views
 - [ ] More complex navigation
