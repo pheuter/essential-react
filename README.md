@@ -1,6 +1,18 @@
 # Essential React
 A minimal skeleton for building testable React apps using ES6.
 
+- [Design Goals](#design-goals)
+- [Getting Started](#getting-started)
+- [Dependencies](#dependencies)
+  - [Dev](#dev)
+- [Project structure](#project-structure)
+- [Commands](#commands)
+  - [watch](#watch)
+  - [build](#build)
+  - [test](#test)
+  - [server](#server)
+  - [clean](#clean)
+
 ## Design Goals
 
 - As few tools as possible (no task runners, etc...)
