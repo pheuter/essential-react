@@ -2,7 +2,7 @@
   "name": "essential-react",
   "version": "0.0.1",
   "description": "A minimal skeleton for building testable React apps using ES6.",
-  "main": "index.js",
+  "main": "src/main.jsx",
   "scripts": {
     "watch": "watchify --debug src/main.jsx -o build/app.js -v",
     "build": "browserify src/main.jsx | uglifyjs --compress --mangle -o build/app.js -- -",
