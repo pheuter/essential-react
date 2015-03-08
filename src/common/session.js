@@ -4,10 +4,12 @@
  * Currently using `window.user` to determine if user is logged in.
  */
 class Session {
-  constructor(globalConfig) {
-    let { user } = globalConfig;
+  constructor(config = {}) {
+    this._config = config;
+  }
 
-    this.loggedIn = user ? true : false;
+  isLoggedIn() {
+    return this._config.user ? true : false;
   }
 }
 
