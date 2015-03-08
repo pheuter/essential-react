@@ -1,0 +1,51 @@
+{
+  "name": "essential-react",
+  "version": "0.0.1",
+  "description": "A minimal skeleton for building testable React apps using ES6.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify --debug src/main.jsx -o build/app.js -v",
+    "build": "browserify src/main.jsx | uglifyjs --compress --mangle -o build/app.js -- -",
+    "test": "mochify",
+    "test-watch": "mochify --watch",
+    "server": "node server.js",
+    "clean": "rm build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pheuter/essential-react.git"
+  },
+  "keywords": [
+    "skeleton",
+    "template",
+    "react",
+    "quickstart"
+  ],
+  "author": "Mark Fayngersh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pheuter/essential-react/issues"
+  },
+  "homepage": "https://github.com/pheuter/essential-react",
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "expect.js": "^0.3.1",
+    "express": "^4.12.2",
+    "mochify": "^2.6.0",
+    "uglify-js": "^2.4.16",
+    "watchify": "^2.4.0"
+  },
+  "dependencies": {
+    "console-polyfill": "^0.2.0",
+    "es5-shim": "^4.1.0",
+    "react": "^0.12.2",
+    "react-router": "^0.12.4",
+    "xhr": "^2.0.1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}
