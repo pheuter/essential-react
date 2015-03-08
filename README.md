@@ -12,6 +12,7 @@ A minimal skeleton for building testable React apps using ES6.
   - [test](#test)
   - [server](#server)
   - [clean](#clean)
+- [TODO](#todo)
 
 ## Design Goals
 
@@ -134,3 +135,14 @@ $ npm run clean
 **Input:** `build/app.js`
 
 Removes the compiled app file from build.
+
+## TODO
+
+- [ ] Styling using [Radium](https://github.com/FormidableLabs/radium).
+  - [ ] Responsive design with media query mixins
+- [ ] Testing
+  - [x] Unit test suite
+  - [ ] CI
+  - [ ] Code coverage
+- [ ] Examples of nested views
+- [ ] More complex navigation
