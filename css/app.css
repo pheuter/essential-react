@@ -1,0 +1,12 @@
+.button-alternative {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #F10960;
+  border-color: #F10960;
+}
+.button-alternative:hover {
+  color: #F10960;
+  border-color: #F10960;
+  background-color: #fff;
+}
