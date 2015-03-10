@@ -11,7 +11,8 @@
     "test-watch": "mochify --watch",
     "cover": "node cover.js && cat lcov.info | coveralls && rm lcov.info",
     "server": "node server.js",
-    "clean": "rm build/app.js"
+    "clean": "rm build/app.js",
+    "dev": "if hash nf 2>/dev/null; then nf start; else foreman start; fi"
   },
   "repository": {
     "type": "git",
