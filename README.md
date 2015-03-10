@@ -88,6 +88,14 @@ A core philosophy of this skeleton app is to keep the tooling to a minimum. For 
 $ npm run watch
 ```
 
+Runs `watch-js` and `server` in a single command.
+
+### watch-js
+
+```sh
+$ npm run watch-js
+```
+
 **Input:** `src/main.jsx`
 
 **Output:** `build/app.js`
