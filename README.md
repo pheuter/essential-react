@@ -14,6 +14,7 @@ A minimal skeleton for building testable React apps using ES6.
 - [Project structure](#project-structure)
 - [Commands](#commands)
   - [watch](#watch)
+  - [watch-js](#watch-js)
   - [build](#build)
   - [test](#test)
   - [cover](#cover)
