@@ -1,5 +1,5 @@
 import React from "react";
-import { getData } from "../../common/request.js";
+import { getData } from "../../common/request";
 
 
 let LandingPage = React.createClass({
