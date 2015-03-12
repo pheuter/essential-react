@@ -3,7 +3,7 @@ import expect from "expect.js";
 import React from "react/addons";
 let { TestUtils } = React.addons;
 
-import SampleComponent from "../../src/common/sample_component.jsx";
+import SampleComponent from "../../src/common/sample_component";
 
 
 describe("Sample Component", function() {

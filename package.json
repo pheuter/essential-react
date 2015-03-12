@@ -7,9 +7,8 @@
     "watch": "npm run watch-js & npm run server",
     "watch-js": "webpack --debug --devtool inline-source-map --output-pathinfo --watch",
     "build": "webpack -p",
-    "test": "mochify",
-    "test-watch": "mochify --watch",
-    "cover": "node cover.js && cat lcov.info | coveralls && rm lcov.info",
+    "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start karma.config.js",
+    "coveralls": "cat coverage/lcov.info | coveralls",
     "server": "node server.js",
     "clean": "rm build/app.js"
   },
@@ -35,18 +34,19 @@
     "coveralls": "^2.11.2",
     "expect.js": "^0.3.1",
     "express": "^4.12.2",
+    "istanbul": "^0.3.7",
+    "istanbul-instrumenter-loader": "^0.1.2",
+    "karma": "^0.12.31",
+    "karma-coverage": "^0.2.7",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-webpack": "^1.5.0",
+    "phantomjs": "^1.9.16",
     "webpack": "^1.7.2"
   },
   "dependencies": {
-    "console-polyfill": "^0.2.0",
-    "es5-shim": "^4.1.0",
     "react": "^0.12.2",
     "react-router": "^0.12.4",
     "xhr": "^2.0.1"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
   }
 }

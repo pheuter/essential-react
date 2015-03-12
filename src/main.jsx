@@ -2,10 +2,7 @@
  * App entry point
  */
 
-// Shims and Polyfills
-import "es5-shim";
-import "es5-shim/es5-sham";
-import "console-polyfill";
+// Polyfill
 import "babel-core/polyfill";
 
 // Libraries

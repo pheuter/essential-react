@@ -1,4 +1,4 @@
-import { getData } from "../../src/common/request.js";
+import { getData } from "../../src/common/request";
 
 
 describe("Request", function() {
