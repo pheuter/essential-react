@@ -33,6 +33,16 @@ A minimal skeleton for building testable React apps using ES6.
 
 ## Getting Started
 
+Clone the repo
+
+```sh
+git clone git@github.com:pheuter/essential-react.git my_project_name
+cd $_
+rm -rf .git
+```
+
+Install dependencies
+
 ```sh
 $ npm install
 ```
