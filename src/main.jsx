@@ -69,8 +69,7 @@ let fetchData = async function(routes, params) {
 
   await Promise.all(routes.map(async route => {
     if(!route.handler.fetchData) return;
-    var resp = await route.handler.fetchData(params);
-    data[route.name] = resp;
+    data[route.name] = await route.handler.fetchData(params);
   }));
 
   return data;
