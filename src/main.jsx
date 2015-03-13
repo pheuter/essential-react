@@ -64,7 +64,7 @@ if (Session.isLoggedIn()) {
  *
  * @return {Promise}        data containing responses mapped by route name
  */
-async function fetchData(routes, params) {
+let fetchData = async function(routes, params) {
   let data = {};
 
   await Promise.all(routes.map(async route => {
