@@ -49,7 +49,7 @@
   },
   "browserify": {
     "transform": [
-      "babelify"
+      ["babelify", { "experimental": true }]
     ]
   }
 }
