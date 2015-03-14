@@ -34,16 +34,10 @@ A minimal skeleton for building testable React apps using ES6.
 $ npm install
 ```
 
-You can now start the local dev server:
+Start the local dev server:
 
 ```sh
 $ npm run server
-```
-
-and start the watcher:
-
-```sh
-$ npm run watch
 ```
 
 Navigate to **http://localhost:8080/** to view the app.
