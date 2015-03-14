@@ -1,9 +1,7 @@
-import expect from "expect.js";
-
 import React from "react/addons";
 let { TestUtils } = React.addons;
 
-import LoggedOutRouter from "../../src/routers/logged_out.jsx";
+import LoggedOutRouter from "../../src/routers/logged_out";
 
 
 describe("LoggedOut Router", function() {

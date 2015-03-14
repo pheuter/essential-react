@@ -2,7 +2,7 @@ import React from "react";
 import Router from "react-router";
 let { Route, DefaultRoute, RouteHandler } = Router;
 
-import LandingPage from "../pages/landing/page.jsx";
+import LandingPage from "../pages/landing/page";
 
 
 let LoggedOutRouter = React.createClass({

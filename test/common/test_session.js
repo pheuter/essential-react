@@ -1,6 +1,4 @@
-import expect from "expect.js";
-
-import Session from "../../src/common/session.js";
+import Session from "../../src/common/session";
 
 
 describe("Session", function() {

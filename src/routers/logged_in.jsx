@@ -2,7 +2,7 @@ import React from "react";
 import Router from "react-router";
 let { Route, DefaultRoute, RouteHandler, Link } = Router;
 
-import HomePage from "../pages/home/page.jsx";
+import HomePage from "../pages/home/page";
 
 
 let LoggedInRouter = React.createClass({

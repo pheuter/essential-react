@@ -4,13 +4,10 @@
   "description": "A minimal skeleton for building testable React apps using ES6.",
   "main": "src/main.jsx",
   "scripts": {
-    "watch": "npm run watch-js & npm run server",
-    "watch-js": "watchify --debug src/main.jsx -o build/app.js -v",
-    "build": "browserify src/main.jsx | uglifyjs --compress --mangle -o build/app.js -- -",
-    "test": "mochify",
-    "test-watch": "mochify --watch",
-    "cover": "node cover.js && cat lcov.info | coveralls && rm lcov.info",
     "server": "node server.js",
+    "build": "webpack -p --config webpack.production.config.js",
+    "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start karma.config.js",
+    "coveralls": "cat coverage/lcov.info | coveralls",
     "clean": "rm build/app.js"
   },
   "repository": {
@@ -30,26 +27,25 @@
   },
   "homepage": "https://github.com/pheuter/essential-react",
   "devDependencies": {
-    "babelify": "^5.0.4",
-    "browserify": "^9.0.3",
+    "babel-core": "^4.7.8",
+    "babel-loader": "^4.1.0",
     "coveralls": "^2.11.2",
-    "expect.js": "^0.3.1",
     "express": "^4.12.2",
-    "mochify": "^2.6.0",
-    "mochify-istanbul": "^2.1.1",
-    "uglify-js": "^2.4.16",
-    "watchify": "^2.4.0"
+    "istanbul": "^0.3.7",
+    "istanbul-instrumenter-loader": "^0.1.2",
+    "karma": "^0.12.31",
+    "karma-coverage": "^0.2.7",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon-chai": "^0.3.0",
+    "karma-webpack": "^1.5.0",
+    "phantomjs": "^1.9.16",
+    "react-hot-loader": "^1.2.3",
+    "webpack": "^1.7.2",
+    "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
-    "console-polyfill": "^0.2.0",
-    "es5-shim": "^4.1.0",
     "react": "^0.12.2",
-    "react-router": "^0.12.4",
-    "xhr": "^2.0.1"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+    "react-router": "^0.12.4"
   }
 }

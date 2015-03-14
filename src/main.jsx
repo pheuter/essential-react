@@ -2,22 +2,19 @@
  * App entry point
  */
 
-// Shims and Polyfills
-import "es5-shim";
-import "es5-shim/es5-sham";
-import "console-polyfill";
-import "babelify/polyfill";
+// Polyfill
+import "babel-core/polyfill";
 
 // Libraries
 import React from "react";
 import Router from "react-router";
 
 // Common utilities
-import Session from "./common/session.js";
+import Session from "./common/session";
 
 // Routers
-import LoggedOutRouter from "./routers/logged_out.jsx";
-import LoggedInRouter from "./routers/logged_in.jsx";
+import LoggedOutRouter from "./routers/logged_out";
+import LoggedInRouter from "./routers/logged_in";
 
 
 // ID of the DOM element to mount app on
