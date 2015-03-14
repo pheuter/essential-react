@@ -18,7 +18,7 @@ A minimal skeleton for building testable React apps using ES6.
   - [test](#test)
   - [coveralls](#coveralls)
   - [clean](#clean)
-- [TODO](#todo)
+- [Changelog](#changelog)
 
 ## Design Goals
 
@@ -128,3 +128,5 @@ $ npm run clean
 **Input:** `build/app.js`
 
 Removes the compiled app file from build.
+
+## [Changelog](CHANGELOG.md)
