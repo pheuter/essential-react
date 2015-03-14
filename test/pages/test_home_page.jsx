@@ -1,5 +1,3 @@
-import expect from "expect.js";
-
 import React from "react/addons";
 let { TestUtils } = React.addons;
 

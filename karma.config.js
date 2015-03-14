@@ -34,9 +34,10 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
 
     /**
-     * Use Mocha as the test framework.
+     * Use Mocha as the test framework, Sinon for mocking, and
+     * Chai for assertions.
      */
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'sinon-chai'],
 
     /**
      * After running the tests, return the results and generate a
@@ -100,6 +101,7 @@ module.exports = function(config) {
       'karma-mocha',
       'karma-webpack',
       'karma-coverage',
+      'karma-sinon-chai',
       'karma-phantomjs-launcher'
     ],
   });

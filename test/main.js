@@ -2,12 +2,15 @@
  * Test suite entry point
  */
 
-require('./common/test_sample_component');
-require('./common/test_request');
-require('./common/test_session');
+// Babel Polyfill
+import 'babel-core/polyfill';
 
-require('./routers/test_logged_in');
-require('./routers/test_logged_out');
+import './common/test_sample_component';
+import './common/test_request';
+import './common/test_session';
 
-require('./pages/test_home_page');
-require('./pages/test_landing_page');
+import './routers/test_logged_in';
+import './routers/test_logged_out';
+
+import './pages/test_home_page';
+import './pages/test_landing_page';

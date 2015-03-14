@@ -1,5 +1,3 @@
-import expect from "expect.js";
-
 import Session from "../../src/common/session";
 
 
