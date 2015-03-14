@@ -62,7 +62,7 @@ module.exports = function(config) {
     /**
      * The configuration for the karma-webpack plugin.
      *
-     * This is very similar to the main webpack.config.js, with the
+     * This is very similar to the main webpack.local.config.js, with the
      * exception of specifying an istanbul-transformer post loader so
      * that we can generate an accurate code coverage report.
      */

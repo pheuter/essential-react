@@ -4,12 +4,10 @@
   "description": "A minimal skeleton for building testable React apps using ES6.",
   "main": "src/main.jsx",
   "scripts": {
-    "watch": "npm run watch-js & npm run server",
-    "watch-js": "webpack --debug --devtool inline-source-map --output-pathinfo --watch",
-    "build": "webpack -p",
+    "server": "node server.js",
+    "build": "webpack -p --config webpack.production.config.js",
     "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start karma.config.js",
     "coveralls": "cat coverage/lcov.info | coveralls",
-    "server": "node server.js",
     "clean": "rm build/app.js"
   },
   "repository": {
@@ -42,7 +40,9 @@
     "karma-sinon-chai": "^0.3.0",
     "karma-webpack": "^1.5.0",
     "phantomjs": "^1.9.16",
-    "webpack": "^1.7.2"
+    "react-hot-loader": "^1.2.3",
+    "webpack": "^1.7.2",
+    "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
     "react": "^0.12.2",
