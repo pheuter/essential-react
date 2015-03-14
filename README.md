@@ -101,7 +101,7 @@ $ npm run build
 
 **Output:** `build/app.js`
 
-Very similar to **watch**, but doesn't include source maps and minifies the output using the [production](http://webpack.github.io/docs/cli.html#production-shortcut-p) shortcut.
+Build minified app for production using the [production](http://webpack.github.io/docs/cli.html#production-shortcut-p) shortcut.
 
 ### test
 
