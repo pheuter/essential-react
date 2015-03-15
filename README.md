@@ -77,9 +77,19 @@ A core philosophy of this skeleton app is to keep the tooling to a minimum. For 
 $ npm run server
 ```
 
+Starts the server in production mode (uses the minified app from the `build` script).
+
+Listening port can be specified using the `PORT` enviroment variable (e.g. `PORT=80 npm run server`). Default port is 8080
+
+### dev
+
+```sh
+$ npm run dev
+```
+
 **Input:** `src/main.jsx`
 
-This leverages [React Hot Loader](https://github.com/gaearon/react-hot-loader) to automatically start a local dev server and refresh file changes on the fly without reloading the page.
+This leverages [React Hot Loader](https://github.com/gaearon/react-hot-loader) to automatically start a local dev server and refresh file changes on the fly without reloading the page. The server is also automatically restarted when it is changed, using [nodemon](https://github.com/remy/nodemon).
 
 It also automatically includes source maps, allowing you to browse code and set breakpoints on the original ES6 code:
 
