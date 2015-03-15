@@ -16,23 +16,18 @@ module.exports = {
   devtool: "eval",
 
   // Set entry point to ./src/main and include necessary files for hot load
-  entry:  [
-    "webpack-dev-server/client?http://localhost:9090",
-    "webpack/hot/only-dev-server",
-    "./src/main"
-  ],
+  entry: "./src/main",
 
   // This will not actually create a bundle.js file in ./build. It is used
   // by the dev server for dynamic hot loading.
   output: {
     path: __dirname + "/build/",
     filename: "app.js",
-    publicPath: "http://localhost:9090/build/"
+    publicPath: "/"
   },
 
   // Necessary plugins for hot load
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
 
