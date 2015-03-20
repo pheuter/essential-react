@@ -5,17 +5,7 @@ let { Route, DefaultRoute, RouteHandler } = Router;
 import LandingPage from "../pages/landing/page";
 
 
-let LoggedOutRouter = React.createClass({
-  statics: {
-    getRoutes() {
-      return (
-        <Route name="app" path="/" handler={LoggedOutRouter}>
-          <DefaultRoute name="landing" handler={LandingPage} />
-        </Route>
-      );
-    }
-  },
-
+export default class LoggedOutRouter extends React.Component {
   render() {
     return (
       <div id="container">
@@ -25,7 +15,12 @@ let LoggedOutRouter = React.createClass({
       </div>
     );
   }
-});
+}
 
-
-export default LoggedOutRouter
+LoggedOutRouter.getRoutes = function() {
+  return (
+    <Route name="app" path="/" handler={LoggedOutRouter}>
+      <DefaultRoute name="landing" handler={LandingPage} />
+    </Route>
+  );
+}
