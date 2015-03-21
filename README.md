@@ -44,8 +44,8 @@ Navigate to **http://localhost:8080/** to view the app.
 
 ## Dependencies
 
-- [react v0.12](http://facebook.github.io/react/)
-- [react-router v0.12](https://github.com/rackt/react-router)
+- [react](http://facebook.github.io/react/)
+- [react-router](https://github.com/rackt/react-router)
 
 ### Dev
 

@@ -1,6 +1,6 @@
 {
   "name": "essential-react",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A minimal skeleton for building testable React apps using ES6.",
   "main": "src/main.jsx",
   "scripts": {

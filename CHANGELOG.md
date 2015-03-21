@@ -1,3 +1,7 @@
+# v0.2.1
+
+Updated React and React Router to v0.13.1
+
 # v0.2.0
 
 Major changes:
