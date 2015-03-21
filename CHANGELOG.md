@@ -1,3 +1,7 @@
+# v0.2.2
+
+Integrated with [Sauce Labs](https://saucelabs.com/) for automated, cross-browser testing.
+
 # v0.2.1
 
 Updated React and React Router to v0.13.1
