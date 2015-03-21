@@ -5,6 +5,8 @@
 [![npm](https://img.shields.io/npm/v/essential-react.svg?style=flat-square)](https://www.npmjs.com/package/essential-react)
 [![David](https://img.shields.io/david/pheuter/essential-react.svg?style=flat-square)](https://david-dm.org/pheuter/essential-react)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/essential_react.svg)](https://saucelabs.com/u/essential_react)
+
 A minimal skeleton for building testable React apps using ES6.
 
 - [Design Goals](#design-goals)
