@@ -39,8 +39,7 @@ module.exports = function(config) {
     },
 
     /**
-     * We want to run the tests using the PhantomJS headless browser.
-     * This is especially useful for continuous integration.
+     * We want to use the Sauce Lab browsers defined above.
      */
     browsers: Object.keys(customLaunchers),
 
@@ -51,8 +50,7 @@ module.exports = function(config) {
     frameworks: ['mocha', 'sinon-chai'],
 
     /**
-     * After running the tests, return the results and generate a
-     * code coverage report.
+     * Integrate with the sauce labs reporter.
      */
     reporters: ['dots', 'saucelabs'],
 
