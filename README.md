@@ -5,6 +5,8 @@
 [![npm](https://img.shields.io/npm/v/essential-react.svg?style=flat-square)](https://www.npmjs.com/package/essential-react)
 [![David](https://img.shields.io/david/pheuter/essential-react.svg?style=flat-square)](https://david-dm.org/pheuter/essential-react)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/essential_react.svg)](https://saucelabs.com/u/essential_react)
+
 A minimal skeleton for building testable React apps using ES6.
 
 - [Design Goals](#design-goals)
@@ -16,6 +18,7 @@ A minimal skeleton for building testable React apps using ES6.
   - [server](#server)
   - [build](#build)
   - [test](#test)
+  - [test-cross-browser](#test-cross-browser)
   - [coveralls](#coveralls)
   - [clean](#clean)
 - [Changelog](#changelog)
@@ -108,6 +111,16 @@ $ npm test
 **Output:** `coverage/`
 
 Leverages [Karma](http://karma-runner.github.io/0.12/index.html) to run through the test suite using [PhantomJS](http://phantomjs.org/) and generate code coverage reports.
+
+### test-cross-browser
+
+```sh
+$ npm run test-cross-browser
+```
+
+**Input:** `test/main.js`
+
+Runs the unit test suite against various browsers using the [Sauce Labs](https://saucelabs.com/) automated cross-browser testing tool.
 
 ### coveralls
 

@@ -7,6 +7,7 @@
     "server": "node server.js",
     "build": "webpack -p --config webpack.production.config.js",
     "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start karma.config.js",
+    "test-cross-browser": "./node_modules/karma/bin/karma start karma.cross-browser.config.js",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "clean": "rm build/app.js"
   },
@@ -37,6 +38,7 @@
     "karma-coverage": "^0.2.7",
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sauce-launcher": "^0.2.10",
     "karma-sinon-chai": "^0.3.0",
     "karma-webpack": "^1.5.0",
     "phantomjs": "^1.9.16",
