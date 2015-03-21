@@ -2,16 +2,10 @@ import React from "react";
 import { getData } from "../../common/request";
 
 
-let LandingPage = React.createClass({
-  statics: {
-    fetchData(params) {
-      return getData("/landing");
-    }
-  },
-
+export default class LandingPage extends React.Component {
   componentWillMount() {
     console.log("[LandingPage] will mount with server response: ", this.props.data.landing);
-  },
+  }
 
   render() {
     let { title } = this.props.data.landing;
@@ -22,7 +16,8 @@ let LandingPage = React.createClass({
       </div>
     );
   }
-});
+}
 
-
-export default LandingPage;
+LandingPage.fetchData = function(params) {
+  return getData("/landing");
+}
