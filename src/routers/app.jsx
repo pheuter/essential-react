@@ -9,7 +9,21 @@ import LoggedInRouter from "./logged_in";
 import Session from "../common/session";
 
 
+// Media queries
+// import { MatchMediaBase } from "radium"
+
+
+// MatchMediaBase.init({
+//   sm: "(min-width: 768px)",
+//   md: "(min-width: 992px)",
+//   lg: "(min-width: 1200px)"
+// });
+
 export default class AppRouter extends React.Component {
+  constructor() {
+    // this.mixins = [MatchMediaBase]
+  }
+
   render() {
     return (
       <RouteHandler {...this.props} />
