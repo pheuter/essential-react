@@ -7,6 +7,10 @@
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/essential_react.svg)](https://saucelabs.com/u/essential_react)
 
+---
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 A minimal skeleton for building testable React apps using ES6.
 
 - [Design Goals](#design-goals)
