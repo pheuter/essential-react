@@ -1,14 +1,11 @@
 var express = require('express');
 var app = express();
 
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.local.config');
-
 
 /************************************************************
  *
  * Express routes for:
+ *   - app.js
  *   - index.html
  *
  *   Sample endpoints to demo async data fetching:
@@ -16,6 +13,15 @@ var config = require('./webpack.local.config');
  *     - POST /home
  *
  ************************************************************/
+
+// Serve application file depending on environment
+app.get('/app.js', function(req, res) {
+  if (process.env.PRODUCTION) {
+    res.sendFile(__dirname + '/build/app.js');
+  } else {
+    res.redirect('//localhost:9090/build/app.js');
+  }
+});
 
 // Serve index page
 app.get('*', function(req, res) {
@@ -43,16 +49,23 @@ app.post('/home', function(req, res) {
  *
  *************************************************************/
 
-new WebpackDevServer(webpack(config), {
-  publicPath: config.output.publicPath,
-  hot: true,
-  noInfo: true,
-  historyApiFallback: true
-}).listen(9090, 'localhost', function (err, result) {
-  if (err) {
-    console.log(err);
-  }
-});
+if (!process.env.PRODUCTION) {
+  var webpack = require('webpack');
+  var WebpackDevServer = require('webpack-dev-server');
+  var config = require('./webpack.local.config');
+
+  new WebpackDevServer(webpack(config), {
+    publicPath: config.output.publicPath,
+    hot: true,
+    noInfo: true,
+    historyApiFallback: true
+  }).listen(9090, 'localhost', function (err, result) {
+    if (err) {
+      console.log(err);
+    }
+  });
+}
+
 
 /******************
  *

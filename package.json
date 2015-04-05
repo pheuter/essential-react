@@ -4,6 +4,7 @@
   "description": "A minimal skeleton for building testable React apps using ES6.",
   "main": "src/main.jsx",
   "scripts": {
+    "postinstall": "npm run build",
     "server": "node server.js",
     "build": "webpack -p --config webpack.production.config.js",
     "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start karma.config.js",
@@ -31,7 +32,6 @@
     "babel-core": "^4.7.8",
     "babel-loader": "^4.1.0",
     "coveralls": "^2.11.2",
-    "express": "^4.12.2",
     "istanbul": "^0.3.7",
     "istanbul-instrumenter-loader": "^0.1.2",
     "karma": "^0.12.31",
@@ -47,6 +47,7 @@
     "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
+    "express": "^4.12.3",
     "react": "^0.13.1",
     "react-router": "^0.13.1"
   }
