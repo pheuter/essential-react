@@ -1,3 +1,11 @@
+# v0.2.3
+
+- Use the HTML5 history API for cleaner URLs - @paulyoung
+- Wrapped up remaining unit tests, better code coverage
+- `PRODUCTION` environment variable now serves static file when running `node server.js`
+- Build app upon npm postinstall
+- Instant deploy with Heroku button
+
 # v0.2.2
 
 Integrated with [Sauce Labs](https://saucelabs.com/) for automated, cross-browser testing.
