@@ -1,3 +1,7 @@
+# v0.2.4
+
+Updated various dependencies
+
 # v0.2.3
 
 - Use the HTML5 history API for cleaner URLs - @paulyoung

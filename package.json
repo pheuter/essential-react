@@ -1,6 +1,6 @@
 {
   "name": "essential-react",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A minimal skeleton for building testable React apps using ES6.",
   "main": "src/main.jsx",
   "scripts": {
@@ -44,11 +44,11 @@
     "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
-    "babel-core": "^5.0.8",
-    "babel-loader": "^5.0.0",
+    "babel-core": "^5.4.3",
+    "babel-loader": "^5.1.2",
     "express": "^4.12.3",
-    "react": "^0.13.1",
-    "react-router": "^0.13.1",
-    "webpack": "^1.7.3"
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "webpack": "^1.9.6"
   }
 }
