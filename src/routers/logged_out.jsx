@@ -19,7 +19,7 @@ export default class LoggedOutRouter extends React.Component {
 
 LoggedOutRouter.getRoutes = function() {
   return (
-    <Route name="app" path="/" handler={LoggedOutRouter}>
+    <Route handler={LoggedOutRouter}>
       <DefaultRoute name="landing" handler={LandingPage} />
     </Route>
   );

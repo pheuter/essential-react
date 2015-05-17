@@ -1,8 +1,13 @@
 import React from "react";
 import { getData } from "../../common/request";
+// import { MatchMediaItem } from "radium"
 
 
 export default class LandingPage extends React.Component {
+  // constructor() {
+  //   this.mixins = [MatchMediaItem]
+  // }
+
   componentWillMount() {
     console.log("[LandingPage] will mount with server response: ", this.props.data.landing);
   }
