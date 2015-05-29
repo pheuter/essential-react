@@ -16,8 +16,8 @@ export default class LandingPage extends React.Component {
       </div>
     );
   }
-}
 
-LandingPage.fetchData = function(params) {
-  return getData("/landing");
+  static fetchData = function(params) {
+    return getData("/landing");
+  }
 }
