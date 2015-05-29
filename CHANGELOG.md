@@ -1,3 +1,7 @@
+# v0.2.5
+
+ES6 cleanup with static class properties - @StevenLangbroek
+
 # v0.2.4
 
 Updated various dependencies
