@@ -1,6 +1,5 @@
 import React from "react";
-import Router from "react-router";
-let { Route, DefaultRoute, RouteHandler, Link } = Router;
+import { Route, DefaultRoute, RouteHandler, Link } from "react-router";
 
 import HomePage from "../pages/home/page";
 
@@ -23,12 +22,13 @@ export default class LoggedInRouter extends React.Component {
       </div>
     );
   }
-}
 
-LoggedInRouter.getRoutes = function() {
-  return (
-    <Route name="app" path="/" handler={LoggedInRouter}>
-      <DefaultRoute name="home" handler={HomePage} />
-    </Route>
-  );
+  static getRoutes = function() {
+    return (
+      <Route name="app" path="/" handler={LoggedInRouter}>
+        <DefaultRoute name="home" handler={HomePage} />
+      </Route>
+    );
+  }
+
 }
