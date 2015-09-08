@@ -32,7 +32,7 @@
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.7",
     "istanbul-instrumenter-loader": "^0.1.2",
-    "karma": "^0.12.31",
+    "karma": "^0.13.9",
     "karma-coverage": "^0.2.7",
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.1.4",
