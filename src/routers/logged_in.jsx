@@ -16,9 +16,7 @@ export default class LoggedInRouter extends React.Component {
           </header>
         </div>
 
-        <div id="main">
-          <RouteHandler {...this.props} />
-        </div>
+        <RouteHandler {...this.props} />
       </div>
     );
   }

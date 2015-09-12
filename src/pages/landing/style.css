@@ -1,0 +1,28 @@
+.content {
+  margin-top: 50px;
+}
+
+.heading {
+  font-size: 10vw;
+}
+
+.lead {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 3vw;
+}
+
+.signUpButton {
+  display: inline-block;
+  padding: 1vw 2vw;
+  border: 0;
+  font-size: 2vw;
+
+  background-color: #4B9DA3;
+  color: #f3f3f3;
+
+  cursor: pointer;
+  border-radius: 2px;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 25px -5px rgba(0,0,0,0.5);
+}

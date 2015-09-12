@@ -6,6 +6,7 @@ var app = express();
  *
  * Express routes for:
  *   - app.js
+ *   - style.css
  *   - index.html
  *
  *   Sample endpoints to demo async data fetching:
@@ -20,6 +21,15 @@ app.get('/app.js', function(req, res) {
     res.sendFile(__dirname + '/build/app.js');
   } else {
     res.redirect('//localhost:9090/build/app.js');
+  }
+});
+
+// Serve aggregate stylesheet depending on environment
+app.get('/style.css', function(req, res) {
+  if (process.env.PRODUCTION) {
+    res.sendFile(__dirname + '/build/style.css');
+  } else {
+    res.redirect('//localhost:9090/build/style.css');
   }
 });
 

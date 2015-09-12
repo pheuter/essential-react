@@ -1,5 +1,7 @@
 import React from "react";
 import { getData } from "../../common/request";
+import styles from "./style.css";
+
 
 export default class HomePage extends React.Component {
   componentWillMount() {
@@ -10,8 +12,9 @@ export default class HomePage extends React.Component {
     let { title } = this.props.data.home;
 
     return (
-      <div id="home-page">
+      <div className={styles.content}>
         <h1>{title}</h1>
+        <p className={styles.welcomeText}>Thanks for joining!</p>
       </div>
     );
   }

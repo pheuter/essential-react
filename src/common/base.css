@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  background-color: #f1f1f1;
+}
+
+h1 {
+  margin: 0;
+  color: #F97F85;
+}
+
+:global(#container) {
+  width: 100%;
+
+  @media (min-width: 960px) {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  :global(#navigation) {
+    padding: 10px 15px;
+    background-color: #F9E957;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+
+        a {
+          color: #555;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 /**
  * This is the Karma configuration file. It contains information about this skeleton
  * that provides the test runner with instructions on how to run the tests and
@@ -67,9 +69,13 @@ module.exports = function(config) {
      * that we can generate an accurate code coverage report.
      */
     webpack: {
+      plugins: [
+        new ExtractTextPlugin('style.css', { allChunks: true })
+      ],
       module: {
         loaders: [
-          { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader?stage=0"}
+          { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader?stage=0" },
+          { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') }
         ],
         postLoaders: [{
           test: /\.jsx?$/,
@@ -78,7 +84,7 @@ module.exports = function(config) {
         }]
       },
       resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx', '.css']
       }
     },
 

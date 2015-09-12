@@ -1,3 +1,8 @@
+# v0.3.0
+
+- Implemented [css-modules](https://github.com/css-modules/css-modules) with basic styling
+- Bumped karma to 0.13.9 @claudiopro
+
 # v0.2.5
 
 ES6 cleanup with static class properties - @StevenLangbroek

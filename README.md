@@ -33,6 +33,7 @@ A minimal skeleton for building testable React apps using ES6.
 - ES6 with polyfills for current browsers
 - Testability: ease of writing unit tests and generating code coverage
 - Minimize templates, compose DOM alongside components via JSX
+- `require()` styles from css files
 - Session-driven routing using [react-router](https://github.com/rackt/react-router) with async data fetching
 
 ## Getting Started

@@ -12,6 +12,9 @@ import Router from "react-router";
 // Common utilities
 import Session from "./common/session";
 
+// Base styling
+import "./common/base.css";
+
 // Routers
 import LoggedOutRouter from "./routers/logged_out";
 import LoggedInRouter from "./routers/logged_in";
