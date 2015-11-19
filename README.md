@@ -39,7 +39,7 @@ A minimal skeleton for building testable React apps using ES6.
 ## Getting Started
 
 ```sh
-$ npm install
+$ npm install essential-react
 ```
 
 Start the local dev server:
