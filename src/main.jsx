@@ -61,16 +61,17 @@ if (Session.isLoggedIn()) {
  *
  * @param  {[Route]} routes list of activated routes
  * @param  {[Param]} params route params
+ * @param  {[Query]} query  route query
  *
  * @return {Promise}        data containing responses mapped by route name
  */
-let fetchData = function(routes, params) {
+let fetchData = function(routes, params, query) {
   let data = {};
 
   return Promise.all(routes
     .filter(route => route.handler.fetchData)
     .map(route => {
-      return route.handler.fetchData(params).then(resp => {
+      return route.handler.fetchData(params, query).then(resp => {
         data[route.name] = resp;
       })
     })
@@ -79,7 +80,7 @@ let fetchData = function(routes, params) {
 
 // Start the router
 Router.run(routes, Router.HistoryLocation, function(Handler, state) {
-  fetchData(state.routes, state.params).then((data) => {
+  fetchData(state.routes, state.params, state.query).then((data) => {
     React.render(<Handler data={data} />, document.getElementById(DOM_APP_EL_ID));
   });
 });
