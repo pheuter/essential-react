@@ -1,3 +1,14 @@
+# v0.4.0 [WIP]
+
+Major refactor to bring dependencies up-to-date:
+
+- Update React 0.13 -> 0.14
+- Update React Router 0.x -> 1.0
+- Update Babel 5 -> 6
+- Replace Karma and Istanbul with ava and nyc
+- No more custom routers
+
+
 # v0.3.0
 
 - Implemented [css-modules](https://github.com/css-modules/css-modules) with basic styling

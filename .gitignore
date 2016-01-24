@@ -6,7 +6,8 @@ build/style.css
 logs
 *.log
 
-# Coverage directory used by tools like istanbul
+# Coverage directory used by tools like nyc
+.nyc_output
 coverage
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
