@@ -8,10 +8,10 @@ import "babel-polyfill";
 // Libraries
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, browserHistory } from "react-router";
+import { Router } from "react-router";
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 
-// Common utilities
+// Routes
 import Routes from './common/components/Routes';
 
 // Base styling
