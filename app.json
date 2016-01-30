@@ -9,7 +9,6 @@
   "repository": "https://github.com/pheuter/essential-react",
   "logo": "https://dl.dropboxusercontent.com/u/1803181/essential-react-logo.png",
   "env": {
-    "PRODUCTION": "true",
-    "NPM_CONFIG_PRODUCTION": "false"
+    "PRODUCTION": "true"
   }
 }
