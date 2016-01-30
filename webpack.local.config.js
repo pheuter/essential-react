@@ -14,21 +14,21 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
   // Efficiently evaluate modules with source maps
-  devtool: "eval",
+  devtool: 'eval',
 
   // Set entry point to ./src/main and include necessary files for hot load
   entry:  [
-    "webpack-dev-server/client?http://localhost:9090",
-    "webpack/hot/only-dev-server",
-    "./src/main"
+    'webpack-dev-server/client?http://localhost:9090',
+    'webpack/hot/only-dev-server',
+    './src/main'
   ],
 
   // This will not actually create a bundle.js file in ./build. It is used
   // by the dev server for dynamic hot loading.
   output: {
-    path: __dirname + "/build/",
-    filename: "app.js",
-    publicPath: "http://localhost:9090/build/"
+    path: __dirname + '/build/',
+    filename: 'app.js',
+    publicPath: 'http://localhost:9090/build/'
   },
 
   // Necessary plugins for hot load
@@ -41,7 +41,7 @@ module.exports = {
   // Transform source code using Babel and React Hot Loader
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ["react-hot", "babel-loader?presets[]=es2015,presets[]=react,presets[]=stage-0,plugins[]=transform-runtime"] },
+      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot', 'babel-loader?presets[]=es2015,presets[]=react,presets[]=stage-0,plugins[]=transform-runtime'] },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') }
     ]
   },

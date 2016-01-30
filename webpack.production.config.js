@@ -5,11 +5,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
  * This is the Webpack configuration file for production.
  */
 module.exports = {
-  entry: "./src/main",
+  entry: './src/main',
 
   output: {
-    path: __dirname + "/build/",
-    filename: "app.js"
+    path: __dirname + '/build/',
+    filename: 'app.js'
   },
 
   plugins: [
@@ -18,7 +18,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader?presets[]=es2015,presets[]=react,presets[]=stage-0,plugins[]=transform-runtime" },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015,presets[]=react,presets[]=stage-0,plugins[]=transform-runtime' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') }
     ]
   },
