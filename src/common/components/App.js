@@ -1,7 +1,10 @@
 import React from 'react';
 
 
-export default class App extends React.Component {
+class App extends React.Component {
+  static propTypes = {
+    children: React.PropTypes.element.isRequired,
+  };
   render() {
     return (
       <div id="container">
@@ -10,3 +13,9 @@ export default class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  title: React.PropTypes.string.isRequired,
+};
+
+export default App;
