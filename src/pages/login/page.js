@@ -5,7 +5,7 @@ import styles from "./style.css";
 
 export default class LoginPage extends React.Component {
   
-  signUp(){
+  signUp() {
     browserHistory.push("/home");
   }
   
