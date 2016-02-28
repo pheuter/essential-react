@@ -1,4 +1,4 @@
-# v0.4.0 [WIP]
+# v0.4.0
 
 Major refactor to bring dependencies up-to-date:
 
