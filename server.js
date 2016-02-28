@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 
 
@@ -12,7 +12,7 @@ const app = express();
  ************************************************************/
 
 // Serve application file depending on environment
-app.get('/app.js', function(req, res) {
+app.get('/app.js', (req, res) => {
   if (process.env.PRODUCTION) {
     res.sendFile(__dirname + '/build/app.js');
   } else {
@@ -21,7 +21,7 @@ app.get('/app.js', function(req, res) {
 });
 
 // Serve aggregate stylesheet depending on environment
-app.get('/style.css', function(req, res) {
+app.get('/style.css', (req, res) => {
   if (process.env.PRODUCTION) {
     res.sendFile(__dirname + '/build/style.css');
   } else {
@@ -30,7 +30,7 @@ app.get('/style.css', function(req, res) {
 });
 
 // Serve index page
-app.get('*', function(req, res) {
+app.get('*', (req, res) => {
   res.sendFile(__dirname + '/build/index.html');
 });
 
@@ -53,7 +53,7 @@ if (!process.env.PRODUCTION) {
     hot: true,
     noInfo: true,
     historyApiFallback: true
-  }).listen(9090, 'localhost', function (err, result) {
+  }).listen(9090, 'localhost', (err, result) => {
     if (err) {
       console.log(err);
     }
@@ -68,7 +68,7 @@ if (!process.env.PRODUCTION) {
  *****************/
 
 const port = process.env.PORT || 8080;
-const server = app.listen(port, function () {
+const server = app.listen(port, () => {
   const host = server.address().address;
   const port = server.address().port;
 

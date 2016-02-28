@@ -7,6 +7,7 @@ Major refactor to bring dependencies up-to-date:
 - Upgrade Babel 5 -> 6
 - Replace Karma and Istanbul with ava and nyc
 - No more custom routers
+- Added server-side Babel require hook
 
 
 # v0.3.0
