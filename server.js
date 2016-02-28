@@ -1,5 +1,5 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 
 /************************************************************
@@ -44,9 +44,9 @@ app.get('*', function(req, res) {
  *************************************************************/
 
 if (!process.env.PRODUCTION) {
-  var webpack = require('webpack');
-  var WebpackDevServer = require('webpack-dev-server');
-  var config = require('./webpack.local.config');
+  const webpack = require('webpack');
+  const WebpackDevServer = require('webpack-dev-server');
+  const config = require('./webpack.local.config');
 
   new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
@@ -67,10 +67,10 @@ if (!process.env.PRODUCTION) {
  *
  *****************/
 
-var port = process.env.PORT || 8080;
-var server = app.listen(port, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+const port = process.env.PORT || 8080;
+const server = app.listen(port, function () {
+  const host = server.address().address;
+  const port = server.address().port;
 
   console.log('Essential React listening at http://%s:%s', host, port);
 });

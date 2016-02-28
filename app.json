@@ -1,9 +1,9 @@
 {
   "name": "Essential React",
-  "description": "A minimal skeleton for building testable React apps using ES6",
+  "description": "A minimal skeleton for building testable React apps using Babel",
   "keywords": [
     "react",
-    "es6",
+    "babel",
     "starter"
   ],
   "repository": "https://github.com/pheuter/essential-react",

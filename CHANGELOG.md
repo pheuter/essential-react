@@ -2,9 +2,9 @@
 
 Major refactor to bring dependencies up-to-date:
 
-- Update React 0.13 -> 0.14
-- Update React Router 0.x -> 1.0
-- Update Babel 5 -> 6
+- Upgrade React 0.13 -> 0.14
+- Upgrade React Router 0.x -> 2.0
+- Upgrade Babel 5 -> 6
 - Replace Karma and Istanbul with ava and nyc
 - No more custom routers
 
