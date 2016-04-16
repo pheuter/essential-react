@@ -1,3 +1,7 @@
+# v0.5.0
+
+Upgrade React 0.14 -> 15.0
+
 # v0.4.0
 
 Major refactor to bring dependencies up-to-date:
