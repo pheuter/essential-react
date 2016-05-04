@@ -39,7 +39,6 @@
     "coveralls": "^2.11.2",
     "css-loader": "^0.18.0",
     "enzyme": "^2.0.0",
-    "extract-text-webpack-plugin": "^0.8.2",
     "nyc": "^5.6.0",
     "postcss-loader": "^0.6.0",
     "postcss-nested": "^1.0.0",
