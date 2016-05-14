@@ -105,4 +105,27 @@ $ npm run clean
 
 Removes the compiled app file from build.
 
+## Deploying to Heroku
+
+Build/deploy pipeline of this project relies on two environment variables:
+```
+NPM_CONFIG_PRODUCTION=false
+PRODUCTION=true
+```
+When it comes to deploying to Heroku you have two options for deployment:
+
+### With "Deploy to Heroku" button
+If you deploy on Heroku with the button on top of this page, you don't need to change anything as environment varialbes are read from `app.json`
+
+### With console
+If you deploy to Heroku via command line (like in [this](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app) tutorial), you will need to setup these 2 env variables. 
+In order to do this, execute next lines from console once you setup Heroku:
+
+```
+heroku config:set NPM_CONFIG_PRODUCTION=false
+heroku config:set PRODUCTION=true
+```
+
+If you don't do this, Heroku will fail to build your app (during `git push heroku master`) as environment variables will not be set.
+
 ## [Changelog](CHANGELOG.md)
