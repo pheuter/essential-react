@@ -14,7 +14,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
   // Efficiently evaluate modules with source maps
-  devtool: "eval",
+  devtool: "source-map",
+
 
   // Set entry point to ./src/main and include necessary files for hot load
   entry:  [
