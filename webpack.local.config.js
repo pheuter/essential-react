@@ -15,11 +15,16 @@ module.exports = {
 
   // Efficiently evaluate modules with source maps
   devtool: "eval",
+  
+  // Load the build directory on the webpack server's "/" URI
+  devServer: {
+    contentBase: "./build",
+    hot: true,
+    open: true,
+  },
 
   // Set entry point to ./src/main and include necessary files for hot load
   entry:  [
-    "webpack-dev-server/client?http://localhost:9090",
-    "webpack/hot/only-dev-server",
     "./src/main"
   ],
 
