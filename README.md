@@ -34,7 +34,7 @@ A minimal skeleton for building testable React apps using Babel.
 ## Getting Started
 
 ```sh
-$ npm install
+$ npm install essential-react
 ```
 
 Start the local dev server:
