@@ -3,7 +3,7 @@ import React from 'react';
 
 export default ({children}) => {
   return (
-    <div id="container">
+    <div id='appContainer'>
       {children}
     </div>
   );
