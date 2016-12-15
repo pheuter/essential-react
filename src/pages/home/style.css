@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 .content {
   margin-top: 20px;
 }
@@ -5,4 +7,109 @@
 .welcomeText {
   font-size: 20px;
   color: #7F7F7F;
+}
+
+.mainBody {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.titleContainer {
+  position: absolute;
+  top: 330px;
+}
+
+.mainBody h1 {
+  font-size: 80px;
+  letter-spacing: 3px;
+  padding: 0;
+  margin: 0;
+}
+
+.mainHeader {
+  margin-top: 50px;
+  height: 80px;
+}
+
+.logo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: url("./name-logo.png");
+  background-size: contain;
+}
+
+.navList {
+  width: 260px;
+  margin: 0 auto;
+  overflow: hidden;
+  float: right;
+  height: 100%;
+}
+
+ul {
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  float: right;
+}
+
+li {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.selectedWork {
+  position: absolute;
+  top: 700px;
+  height: 600px;
+  width: 75%;
+}
+
+.workT {
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  font-size: 18px;
+  color: #787878;
+  width: 100%;
+}
+
+.workH {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  font-size: 24px;
+  color: black;
+  width: 40%;
+}
+
+.btmHeader {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  font-size: 24px;
+  color: black;
+  width: 40%;
+}
+
+.workContainer {
+  width: 100%;
+  display: inline-block;
+  border-bottom: solid 1px #D7D7D7;
+}
+
+.workDesc {
+  width: 60%;
+  float: right;
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 48px;
+  font-size: 13px;
+  color: #787878;
 }
