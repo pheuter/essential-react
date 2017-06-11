@@ -1,4 +1,4 @@
-![](https://dl.dropboxusercontent.com/u/1803181/essential-react-logo.png)
+<img src="https://storage.googleapis.com/pheuter-assets/essential_react.png" width="200" />
 
 [![Travis branch](https://img.shields.io/travis/pheuter/essential-react.svg?style=flat-square)](https://travis-ci.org/pheuter/essential-react)
 [![Coveralls](https://img.shields.io/coveralls/pheuter/essential-react.svg?style=flat-square)](https://coveralls.io/r/pheuter/essential-react)
