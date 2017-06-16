@@ -9,7 +9,8 @@
     "start-dev": "./node_modules/.bin/webpack-dev-server --progress --config webpack.local.config.js",
     "test": "nyc ava --fail-fast --verbose --require babel-register",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "clean": "rm build/app.js"
+    "clean": "rm build/app.js",
+    "build-sitemap": "node ./sitemap-builder/build.js"
   },
   "repository": {
     "type": "git",
