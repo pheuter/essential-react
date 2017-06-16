@@ -1,60 +1,71 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require("path"),
+    webpack = require("webpack"),
+    ExtractTextPlugin = require("extract-text-webpack-plugin"),
+    HtmlWebpackPlugin = require('html-webpack-plugin');
 
-/**
- * This is the Webpack configuration file for local development. It contains
- * local-specific configuration such as the React Hot Loader, as well as:
- *
- * - The entry point of the application
- * - Where the output file should be
- * - Which loaders to use on what files to properly transpile the source
- *
- * For more information, see: http://webpack.github.io/docs/configuration.html
- */
 module.exports = {
+    context: path.resolve(__dirname, "src"),
+    entry: [
+        "react-hot-loader/patch",
+    // activate HMR for React
 
-  // Efficiently evaluate modules with source maps
-  devtool: "eval",
+        'webpack-dev-server/client?http://localhost:8080/',
+    // bundle the client for webpack-dev-server
+    // and connect to the provided endpoint
 
-  // Set entry point to ./src/main and include necessary files for hot load
-  entry:  [
-    "webpack-dev-server/client?http://localhost:9090",
-    "webpack/hot/only-dev-server",
-    "./src/main"
-  ],
+        "webpack/hot/only-dev-server",
+    // bundle the client for hot reloading
+    // only- means to only hot reload for successful updates
+        "./main.js",
+    ],
+    output: {
+        filename: "app.js",
+        path: path.resolve(__dirname, "build"),
+        publicPath: "/",
+    // necessary for HMR to know where to load the hot update chunks
+    },
+    devtool: "source-map",
+    devServer: {
+        hot: true,
+    // enable HMR on the server
 
-  // This will not actually create a bundle.js file in ./build. It is used
-  // by the dev server for dynamic hot loading.
-  output: {
-    path: __dirname + "/build/",
-    filename: "app.js",
-    publicPath: "http://localhost:9090/build/"
-  },
+        contentBase: path.resolve(__dirname, "build"),
+    // match the output path
 
-  // Necessary plugins for hot load
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('style.css', { allChunks: true })
-  ],
+        publicPath: "/",
+    // match the output `publicPath`
 
-  // Transform source code using Babel and React Hot Loader
-  module: {
-    loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ["react-hot", "babel-loader"] },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') }
-    ]
-  },
+        historyApiFallback: true,
+    },
+    module: {
+        rules: [
+      { test: /\.jsx?$/, loaders: ["babel-loader"], exclude: /node_modules/ },
+        ]
+    },
+    plugins: [
+    // new webpack.HotModuleReplacementPlugin(),
+    // // enable HMR globally
 
-  // Automatically transform files with these extensions
-  resolve: {
-    extensions: ['', '.js', '.jsx', '.css']
-  },
+        new webpack.NamedModulesPlugin(),
+    // prints more readable module names in the browser console on HMR updates
 
-  // Additional plugins for CSS post processing using postcss-loader
-  postcss: [
-    require('autoprefixer'), // Automatically include vendor prefixes
-    require('postcss-nested') // Enable nested rules, like in Sass
-  ]
-
-}
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "commons",
+            filename: "commons.js",
+            minChunks: 2,
+        }),
+        new webpack.DefinePlugin({
+            DEVELOPMENT: "true",
+            PRODUCTION: "false",
+            NODE_ENV: JSON.stringify('development'),
+        }),
+        new HtmlWebpackPlugin({
+          template: "./index.html"
+        })
+    ],
+    resolve: {
+        extensions: [".js", ".jsx"]
+    },
+};

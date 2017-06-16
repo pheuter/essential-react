@@ -9,6 +9,8 @@ import HomePage from '../../pages/home/page';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={LoginPage} />
-    <Route path="home" component={HomePage} />
+    <Route path="/home" component={HomePage} />
+    <Route path="/dashboard" component={HomePage} />
+    <Route path="/about" component={HomePage} />
   </Route>
 );
