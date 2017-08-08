@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
 import App from './App';
@@ -8,7 +8,7 @@ import HomePage from '../../pages/home/page';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={LoginPage} />
-    <Route path="home" component={HomePage} />
+    <IndexRoute component={LoginPage as any} />
+    <Route path="home" component={HomePage as any} />
   </Route>
 );
