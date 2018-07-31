@@ -1,3 +1,7 @@
+# v0.5.1
+
+Added package-lock.json file
+
 # v0.5.0
 
 Upgrade React 0.14 -> 15.0
